@@ -1,0 +1,14 @@
+type TransactionCategory {
+    category: String
+    percentage: Int
+}
+
+type TransactionDetail {
+    transaction_desc: String
+    percentage: Int
+}
+
+type Query {
+    getTransactionCategories(cif: String!): [TransactionCategory]
+    getTransactionDetails(cif: String!, category: String!): [TransactionDetail]
+}
